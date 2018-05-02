@@ -31,18 +31,17 @@ public class Using_String_StringBuffer_StringBuilder {
 		    for (int i = 0; i < max3; i++) {sb2 = sb2.append("b");}
 		    final double finish3 = System.nanoTime();
 		    final double vs3 = finish3 - start3;
-		    System.out.println("Using [StringBuilder] " + max3 + " times, Elapsed time: " + vs3 / 1_000_000.0 + " ms");
+		    System.out.println("Using [StringBuilder] " + max3 + " times, Elapsed time: " + vs3 / 1_000_000.0 + " ms" + "\n");
 		   
 		    DecimalFormat format = new DecimalFormat("####0.00");
 		    
 		    // StringBuilder vs StringBuffer
-		    System.out.println("");
 		    Double StringBuilder_vs_StringBuffer = vs2 / vs3;
-		    System.err.println("StringBuilder vs StringBuffer: StringBuilder " + format.format(StringBuilder_vs_StringBuffer) + " times faster than StringBuffer");
+		    System.err.println("StringBuilder vs StringBuffer: StringBuilder " + format.format(StringBuilder_vs_StringBuffer) + " times faster than StringBuffer" + "\n");
 	 
 		    // StringBuilder vs String
 		    Double StringBuilder_vs_String = vs1 / vs3;
-		    System.err.println("StringBuilder vs String: StringBuilder " + format.format(StringBuilder_vs_String) + " times faster than String");
+		    System.err.println("StringBuilder vs String: StringBuilder " + format.format(StringBuilder_vs_String) + " times faster than String" + "\n");
 	 
 		    // StringBuffer vs String
 		    Double StringBuffer_vs_String = vs1 / vs2;
